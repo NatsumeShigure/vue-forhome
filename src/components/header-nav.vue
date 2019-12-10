@@ -12,7 +12,7 @@
             <router-link to="/">首页</router-link>
           </li>
           <li v-for="(v,i) of navList" :key="i" @mouseenter="hoverChange" @mouseleave="hoverChange">
-            <router-link :to="v.to">{{v.title}}</router-link>
+            <router-link :to="v.to" :class="{on:$route.path==v.to}">{{v.title}}</router-link>
             <div class="nav-sub">
               <router-link to="" v-for="(v,i) of v.sub" :key="i">{{v}}</router-link>
             </div>
@@ -65,7 +65,7 @@ export default {
     hoverChange() {
       this.isHover.liHover = this.isHover.liHover ? false : true
     }
-  },
+  }
 }
 </script>
 <style scoped>

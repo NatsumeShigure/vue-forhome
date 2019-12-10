@@ -93,7 +93,6 @@ export default {
   padding-bottom: 8px;
   line-height: 16px;
   margin: 0px;
-  padding: 0px;
   text-align: center;
 }
 .footer-nav dt a {
@@ -123,6 +122,7 @@ export default {
   padding-bottom: 20px;
   margin-bottom: 18px;
   border-bottom: 1px solid #353434;
+  height: 57px;
 }
 .footer-logo img {
   max-width: 100%;

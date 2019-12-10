@@ -1,14 +1,14 @@
 <template>
   <header class="index-header" :class="isHover">
-    <el-row class="header-wrap">
-      <el-col class="header-logo" :sm="4">
+    <div class="header-wrap">
+      <div class="header-logo">
         <div>
           <router-link to="">
             <img src="/img/header/logo.png">
           </router-link>
         </div>
-      </el-col>
-      <el-col class="header-right" :sm="20">
+      </div>
+      <div class="header-right">
         <nav class="header-nav">
           <ul>
             <li @mouseenter="hoverChange" @mouseleave="hoverChange">
@@ -25,8 +25,8 @@
         <div class="header-search">
           <div class="search-icon iconfont icon-sousuo"></div>
         </div>
-      </el-col>
-    </el-row>
+      </div>
+    </div>
   </header>
 </template>
 <script>
@@ -73,16 +73,6 @@ export default {
 }
 </script>
 <style scoped>
-@media screen and (max-width: 1440px) {
-  .header-nav ul li {
-    margin-right: 40px !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .header-nav ul li {
-    margin-right: 25px !important;
-  }
-}
 .index-header {
   position: fixed;
   top: 0;
@@ -100,7 +90,6 @@ export default {
 .header-wrap {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   height: 100%;
   padding: 0 60px;
 }

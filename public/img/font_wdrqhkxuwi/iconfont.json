@@ -6,11 +6,32 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "283049",
+      "name": "返回顶部",
+      "font_class": "huidingbu",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "518933",
+      "name": "QQ",
+      "font_class": "icon",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
       "icon_id": "1494638",
       "name": "右箭头",
       "font_class": "youjiantou",
       "unicode": "e603",
       "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "4989836",
+      "name": "公众号",
+      "font_class": "gongzhonghao",
+      "unicode": "e668",
+      "unicode_decimal": 58984
     },
     {
       "icon_id": "5034919",
@@ -32,6 +53,27 @@
       "font_class": "youjiantou1",
       "unicode": "e62a",
       "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "6754193",
+      "name": "关 闭",
+      "font_class": "guanbi",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "7859801",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "9000178",
+      "name": "小程序",
+      "font_class": "xiaochengxu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
     }
   ]
 }

@@ -42,7 +42,8 @@ export default {
         { text: "品牌服务" },
         { text: "招商流程" },
         { text: "新闻资讯" }
-      ]
+      ],
+      body: window.document.querySelector("body")
     }
   },
   methods: {
@@ -107,7 +108,8 @@ export default {
     }
   },
   created() {
-    window.document.querySelector("body").style.overflow = "hidden";
+    this.body.style.overflow = "hidden";
+    this.body.style.background = "#fff";
     window.addEventListener("beforeunload", () => {
       window.scrollTo(0, 0)
     })
