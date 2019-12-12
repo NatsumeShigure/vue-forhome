@@ -258,9 +258,6 @@ export default {
     },
     roll() {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-    },
-    showMask() {
-      this.mask = !this.mask
     }
   },
   created() {

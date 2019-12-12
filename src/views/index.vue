@@ -108,6 +108,7 @@ export default {
     }
   },
   created() {
+    window.scrollTo(0, 0);
     this.body.style.overflow = "hidden";
     this.body.style.background = "#fff";
     window.addEventListener("beforeunload", () => {
