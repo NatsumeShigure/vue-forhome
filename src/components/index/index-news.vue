@@ -39,47 +39,47 @@ export default {
       innerHeight: window.innerHeight,
       newsList: [
         {
-          src: "/img/index/news/20190819171706_805.png",
+          src: require("../../assets/img/index/news/20190819171706_805.png"),
           h3: "FORHOME唯家 打造新居家模式",
           div: "FORHOME唯家推出以“家”为核心的整合十大品类组建泛家居全新业态的商业模式。在此基础之上，金海马商业推出唯家生活馆的概念以及唯家客厅睡眠的系列产品。",
           span: "2018-02-26"
         }, {
-          src: "/img/index/news/20190813090432_684.png",
+          src: require("../../assets/img/index/news/20190813090432_684.png"),
           h3: "《2019唯家运筹帷幄 决胜终端精英训练营》成功举办！",
           div: "4月22日至4月24日期间，FORHOME唯家运营中心组织了一场别开生面的集训活动。",
           span: "2019-04-24"
         }, {
-          src: "/img/index/news/20190806203952_301.jpg",
+          src: require("../../assets/img/index/news/20190806203952_301.jpg"),
           h3: "FORHOME唯家广州展厅星耀开幕 ——用极简主义引领未来生活",
           div: "3月16日，国内首个以“极简主义”家居设计和生活方式为导向的空间家居品牌——FORHOME唯家广州旗舰展厅盛大启幕",
           span: "2019-08-06"
         }, {
-          src: "/img/index/news/20190819181028_223.jpg",
+          src: require("../../assets/img/index/news/20190819181028_223.jpg"),
           h3: "4月27日 FORHOME唯家天河香江店盛大开业，诚邀品鉴！",
           div: "4月27日，FORHOME唯家天河香江店迎来盛大开业！全新开业的天河香江店将继续透过ADMON（阿德蒙）系列家具诠释唯家主打的意式极简风格，创造具有想象力的生活空间，更使艺术全面而整体地介入当代家居生活。",
           span: "2019-04-29"
         }, {
-          src: "/img/index/news/20190819180729_147.png",
+          src: require("../../assets/img/index/news/20190819180729_147.png"),
           h3: "3月9日 FORHOME唯家丹东店盛大开业，诚邀品鉴！",
           div: "",
           span: "2019-03-09"
         }, {
-          src: "/img/index/news/20190819175513_468.jpg",
+          src: require("../../assets/img/index/news/20190819175513_468.jpg"),
           h3: "9月8日 FORHOME唯家客厅&睡眠长春香江店盛大开业",
           div: "",
           span: "2018-09-08"
         }, {
-          src: "/img/index/news/20190819175301_788.jpg",
+          src: require("../../assets/img/index/news/20190819175301_788.jpg"),
           h3: "9月1日 FORHOME唯家客厅&睡眠深圳欧洲城店盛大开业",
           div: "9月1日，香江集团全资打造的现代轻奢家具品牌FORHOME唯家深圳欧洲城店盛大开业",
           span: "2018-09-01"
         }, {
-          src: "/img/index/news/20190819175144_686.jpg",
+          src: require("../../assets/img/index/news/20190819175144_686.jpg"),
           h3: "8月18日 FORHOME唯家广州首家睡眠店盛大试营",
           div: "8月18日，香江集团全资打造的现代轻奢家具品牌FORHOME唯家广州首家睡眠店，在广州海珠区香江家居盛大试营业。",
           span: "2018-08-18"
         }, {
-          src: "/img/index/news/20190819175019_646.jpg",
+          src: require("../../assets/img/index/news/20190819175019_646.jpg"),
           h3: "FORHOME唯家沈阳新品发布暨经销商推介会成功举办",
           div: "8月6日，FORHOME唯家在沈阳香江家居成功举办 “遇见未来——FORHOME唯家新品发布暨经销商推介会”。",
           span: "2018-08-06"
@@ -156,7 +156,8 @@ export default {
 </script>
 <style scoped>
 .index-news {
-  background: url(/img/index/20190809173018_829.jpg) center no-repeat;
+  background: url(../../assets/img/index/20190809173018_829.jpg) center
+    no-repeat;
   background-size: cover !important;
   padding-top: 18vh;
   /* box-sizing: border-box; */
@@ -181,7 +182,7 @@ export default {
   margin: 0 8px 0 4px;
   width: 12px;
   height: 30px;
-  background: url(/img/index/index13.png) center no-repeat;
+  background: url(../../assets/img/index/index13.png) center no-repeat;
   background-size: contain;
 }
 .index-news-title > a {

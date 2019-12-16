@@ -18,7 +18,7 @@
       <router-link to="">
         <div class="index-circle"></div>
         <div class="index-box">
-          <img src="/img/index/index2.png">
+          <img :src="require('../../assets/img/index/index2.png')">
           <h2>
             <span>极</span>
             <span>简</span>
@@ -69,8 +69,8 @@ export default {
       innerHeight: window.innerHeight,
       index: 0,
       imgs: [
-        { src: "url(/img/index/20190809164920_154.jpg)" },
-        { src: "url(/img/index/20190810114643_443.jpg)" }
+        { src: `url(${require('../../assets/img/index/20190809164920_154.jpg')})` },
+        { src: `url(${require('../../assets/img/index/20190810114643_443.jpg')})` }
       ],
       paginations: [
         {
@@ -259,7 +259,7 @@ export default {
   left: 0%;
   width: 100%;
   height: 100%;
-  background: url(/img/index/index3.png) top center no-repeat;
+  background: url(../../assets/img/index/index3.png) top center no-repeat;
   background: 100% auto;
   opacity: 0;
   animation: word 1s 1s forwards;

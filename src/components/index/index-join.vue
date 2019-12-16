@@ -26,16 +26,16 @@ export default {
       innerHeight: window.innerHeight,
       joinList: [
         {
-          src: "/img/index/join/index9.png",
+          src: require("../../assets/img/index/join/index9.png"),
           p: ["→ 加盟申请", "→ 沟通洽谈", "→ 市场考察"]
         }, {
-          src: "/img/index/join/index10.png",
+          src: require("../../assets/img/index/join/index10.png"),
           p: ["→ 店面评估", "→ 合同签订", "→ 缴纳保证金"]
         }, {
-          src: "/img/index/join/index11.png",
+          src: require("../../assets/img/index/join/index11.png"),
           p: ["→ 店面设计", "→ 店面装修", "→ 货款下单"]
         }, {
-          src: "/img/index/join/index12.png",
+          src: require("../../assets/img/index/join/index12.png"),
           p: ["→ 人员培训", "→ 驻店指导", "→ 开业促销"]
         }
       ]
@@ -51,7 +51,7 @@ export default {
 </script>
 <style scoped>
 .index-join {
-  background: url(/img/index/20190809172625_176.jpg) center no-repeat;
+  background: url(../../assets/img/index/20190809172625_176.jpg) center no-repeat;
   background-size: cover !important;
   padding-top: 18vh;
   /* box-sizing: border-box; */
@@ -76,7 +76,7 @@ export default {
   margin: 0 8px 0 4px;
   width: 12px;
   height: 30px;
-  background: url(/img/index/index13.png) center no-repeat;
+  background: url(../../assets/img/index/index13.png) center no-repeat;
   background-size: contain;
 }
 .index-join-title > a {

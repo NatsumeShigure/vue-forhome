@@ -22,16 +22,16 @@ export default {
       innerHeight: window.innerHeight,
       serviceList: [
         {
-          src: "/img/index/service/index5.png",
+          src: require("../../assets/img/index/service/index5.png"),
           msg: "服务理念"
         }, {
-          src: "/img/index/service/index8.png",
+          src: require("../../assets/img/index/service/index8.png"),
           msg: "空间设计师服务"
         }, {
-          src: "/img/index/service/index6.png",
+          src: require("../../assets/img/index/service/index6.png"),
           msg: "五包守护家服务",
         }, {
-          src: "/img/index/service/index7.png",
+          src: require("../../assets/img/index/service/index7.png"),
           msg: "爱家服务承诺"
         }
       ],
@@ -47,7 +47,7 @@ export default {
 </script>
 <style scoped>
 .brand-service {
-  background: url(/img/index/20190809171847_661.jpg) center no-repeat;
+  background: url(../../assets/img/index/20190809171847_661.jpg) center no-repeat;
   background-size: cover !important;
   padding-top: 18vh;
   /* box-sizing: border-box; */

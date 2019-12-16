@@ -1,7 +1,7 @@
 <template>
   <div class="video-wrap" :style="{width:innerWidth+'px',height:innerHeight+'px'}">
     <video-player class="video-player vjs-custom-skin" ref="videoPlayer" :options="playerOptions" @ended="onPlayerEnded" @play="onPlayerPlay" id="video"></video-player>
-    <img class="video-img" :class="imgCover" src="/video/20190809170951_758.jpg" @click="onPlay">
+    <img class="video-img" :class="imgCover" :src="require('../../assets/video/20190809170951_758.jpg')" @click="onPlay">
   </div>
 </template>
 <script>
@@ -15,7 +15,7 @@ export default {
       },
       playerOptions: {
         sources: [{
-          src: "/video/20190813113509_909.mp4"
+          src: require("../../assets/video/20190813113509_909.mp4")
         }],
         width: window.innerWidth,
         height: window.innerHeight,

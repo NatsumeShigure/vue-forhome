@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="scroll-btn" @click="scrollBtn" v-show="transY!=-4600">
-      <img src="/img/index/index4.png">
+      <img :src="require('../assets/img/index/index4.png')">
     </div>
   </div>
 </template>

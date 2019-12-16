@@ -14,7 +14,7 @@
         </div>
         <div class="footer-contect">
           <router-link to="" class="footer-logo">
-            <img src="/img/footer/logo2.png">
+            <img :src="require('../assets/img/footer/logo2.png')">
           </router-link>
           <div>400-653-8038</div>
           <p>全国免费咨询热线</p>

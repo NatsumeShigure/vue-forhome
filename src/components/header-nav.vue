@@ -3,7 +3,7 @@
     <div class="header-wrap">
       <div class="logo">
         <router-link to="">
-          <img src="/img/header/logo.png">
+          <img :src="require('../assets/img/header/logo.png')">
         </router-link>
       </div>
       <nav class="header-nav">
