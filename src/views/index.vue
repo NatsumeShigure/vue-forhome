@@ -114,20 +114,18 @@ export default {
     window.addEventListener("beforeunload", () => {
       window.scrollTo(0, 0)
     })
-    window.addEventListener("mousewheel", e => {
-      if (this.canClick) {
-        this.canClick = false
-        if (e.wheelDelta < 0) {
-          this.scrollDown()
-        } else {
-          this.scrollOn()
+    window.addEventListener("mousewheel",
+      e => {
+        if (this.canClick) {
+          this.canClick = false
+          e.wheelDelta < 0 ? this.scrollDown() : this.scrollOn()
+          this.sync()
+          setTimeout(() => {
+            this.canClick = true
+          }, 900)
         }
-        this.sync()
-        setTimeout(() => {
-          this.canClick = true
-        }, 900)
       }
-    })
+    )
   },
   components: {
     indexHeader,

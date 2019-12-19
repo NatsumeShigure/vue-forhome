@@ -72,7 +72,7 @@ export default {
   margin: 0 8px 0 4px;
   width: 12px;
   height: 30px;
-  background: url(/img/index/index13.png) center no-repeat;
+  background: url(../../assets/img/index/index13.png) center no-repeat;
   background-size: contain;
 }
 .brand-service-title > a {
