@@ -22,16 +22,16 @@ export default {
       innerHeight: window.innerHeight,
       serviceList: [
         {
-          src: require("../../assets/img/index/service/index5.png"),
+          src: require("@/assets/img/index/service/index5.png"),
           msg: "服务理念"
         }, {
-          src: require("../../assets/img/index/service/index8.png"),
+          src: require("@/assets/img/index/service/index8.png"),
           msg: "空间设计师服务"
         }, {
-          src: require("../../assets/img/index/service/index6.png"),
+          src: require("@/assets/img/index/service/index6.png"),
           msg: "五包守护家服务",
         }, {
-          src: require("../../assets/img/index/service/index7.png"),
+          src: require("@/assets/img/index/service/index7.png"),
           msg: "爱家服务承诺"
         }
       ],

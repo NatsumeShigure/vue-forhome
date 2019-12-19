@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import index from '../views/index'
-import guanyuweijia from '../views/guanyuweijia'
+import index from '@/views/index'
+import guanyuweijia from '@/views/guanyuweijia'
 
 Vue.use(VueRouter)
 

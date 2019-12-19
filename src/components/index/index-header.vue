@@ -4,7 +4,7 @@
       <div class="header-logo">
         <div>
           <router-link to="">
-            <img :src="require('../../assets/img/header/logo.png')">
+            <img :src="require('@/assets/img/header/logo.png')">
           </router-link>
         </div>
       </div>

@@ -15,7 +15,7 @@
         <div class="wp1400">
           <div class="about-story-box">
             <div class="info-box">
-              <h3 class="about-title">品牌故事<span><img :src="require('../assets/img/guanyuweijia/tag1.png')"></span>
+              <h3 class="about-title">品牌故事<span><img :src="require('@/assets/img/guanyuweijia/tag1.png')"></span>
               </h3>
               <div class="p">
                 <p>FORHOME唯家承袭20世纪欧洲（德国）的现代设计精髓，将艺术与匠心结合，秉承“少即是多”的黄金设计法则，在海外与国内顶级工匠的精心打磨下，通过不同形态与材质的碰撞，以设计、材质、颜色和功能的完美结合，创造具有想象力的生活空间，更使艺术全面而整体地介入当代家居生活。让身处居室空间的每一个时刻，都感觉简单舒适、优雅安宁、和谐自然。</p>
@@ -23,7 +23,7 @@
               </div>
             </div>
             <div class="img-box">
-              <img :src="require('../assets/img/guanyuweijia/about1.jpg')">
+              <img :src="require('@/assets/img/guanyuweijia/about1.jpg')">
             </div>
           </div>
         </div>
@@ -34,13 +34,13 @@
         <div class="wp1400">
           <div class="about-introduct-box">
             <div class="info-box">
-              <h3 class="about-title">品牌介绍<span><img :src="require('../assets/img/guanyuweijia/tag1.png')"></span></h3>
+              <h3 class="about-title">品牌介绍<span><img :src="require('@/assets/img/guanyuweijia/tag1.png')"></span></h3>
               <div class="p">
                 <p>FORHOME唯家，是香江集团基于30余年家具品牌运营经验及家居美学研究沉淀，以“极简主义”家居设计和生活方式为导向，创立的空间家居品牌。唯家品牌以极简主义设计为切入点，专注空间整体风格及配套，专业为用户打造品质、舒适的居家空间。向用户传达极简主义的设计理念，倡导化繁为简、回归自然的生活方式。</p>
               </div>
             </div>
             <div class="img-box">
-              <img :src="require('../assets/img/guanyuweijia/about2.jpg')">
+              <img :src="require('@/assets/img/guanyuweijia/about2.jpg')">
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
             <ul class="product-value-list">
               <li>
                 <div class="img">
-                  <img :src="require('../assets/img/guanyuweijia/pro1.jpg')">
+                  <img :src="require('@/assets/img/guanyuweijia/pro1.jpg')">
                 </div>
                 <div class="info">
                   <div>
@@ -80,7 +80,7 @@
               </li>
               <li>
                 <div class="img">
-                  <img :src="require('../assets/img/guanyuweijia/pro2.jpg')">
+                  <img :src="require('@/assets/img/guanyuweijia/pro2.jpg')">
                 </div>
                 <div class="info">
                   <div>
@@ -101,14 +101,14 @@
         <div class="wp1400">
           <div class="about-story-box">
             <div class="info-box">
-              <h3 class="about-title">品牌主张<span><img :src="require('../assets/img/guanyuweijia/tag1.png')"></span></h3>
+              <h3 class="about-title">品牌主张<span><img :src="require('@/assets/img/guanyuweijia/tag1.png')"></span></h3>
               <div class="p">
                 <div class="about-h4">让爱回家</div>
                 <p>以极简的设计语言，赋予家具简单质朴的灵魂，让家具作为家庭的一部分，为家庭带来舒适与平和——让爱回家。</p>
               </div>
             </div>
             <div class="img-box">
-              <img :src="require('../assets/img/guanyuweijia/about4.jpg')">
+              <img :src="require('@/assets/img/guanyuweijia/about4.jpg')">
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
         <div class="wp1400">
           <div class="about-introduct-box">
             <div class="info-box">
-              <h3 class="about-title">品牌设计理念<span><img :src="require('../assets/img/guanyuweijia/tag1.png')"></span>
+              <h3 class="about-title">品牌设计理念<span><img :src="require('@/assets/img/guanyuweijia/tag1.png')"></span>
               </h3>
               <div class="p">
                 <div class="about-h4">极简主义风尚</div>
@@ -129,7 +129,7 @@
               </div>
             </div>
             <div class="img-box">
-              <img :src="require('../assets/img/guanyuweijia/about5.jpg')">
+              <img :src="require('@/assets/img/guanyuweijia/about5.jpg')">
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@
           <div class="service-title">
             <h3>品牌价值</h3>
             <div class="tag">
-              <img :src="require('../assets/img/guanyuweijia/tag1.png')">
+              <img :src="require('@/assets/img/guanyuweijia/tag1.png')">
             </div>
           </div>
           <ul class="about-value-list">
@@ -168,14 +168,14 @@
         <div class="iconfont icon-gongzhonghao"></div>
         <p>微信公众号</p>
         <div class="handle-box-pupop">
-          <img :src="require('../assets/img/guanyuweijia/qrcode.jpg')">
+          <img :src="require('@/assets/img/guanyuweijia/qrcode.jpg')">
         </div>
       </li>
       <li class="handle-box" :class="{showPupop:active==1}" @click="show(1)">
         <div class="iconfont icon-xiaochengxu"></div>
         <p>微信小程序</p>
         <div class="handle-box-pupop">
-          <img :src="require('../assets/img/guanyuweijia/xiaochenxu.png')">
+          <img :src="require('@/assets/img/guanyuweijia/xiaochenxu.png')">
         </div>
       </li>
       <li class="handle-box">
@@ -199,19 +199,19 @@ export default {
       body: window.document.querySelector("body"),
       valueList: [
         {
-          src: require("../assets/img/guanyuweijia/about6.jpg"),
+          src: require("@/assets/img/guanyuweijia/about6.jpg"),
           title: "极简主义的设计价值",
           p: "以化繁为简的家居美学为设计核心，承袭经典意式经典设计美学，专注于极简主义的产品及空间设计。"
         }, {
-          src: require("../assets/img/guanyuweijia/about7.jpg"),
+          src: require("@/assets/img/guanyuweijia/about7.jpg"),
           title: "追求极致的产品价值",
           p: "关注产品品质及细节，对产品选材及工艺进行严格把关，将艺术与技术完美结合。"
         }, {
-          src: require("../assets/img/guanyuweijia/about8.jpg"),
+          src: require("@/assets/img/guanyuweijia/about8.jpg"),
           title: "专业全面的服务价值",
           p: "在满足家居设计、送货、安装、售后一站式配套服务需求的同时，为消费者提供一对一专业家居设计指导的增值服务。"
         }, {
-          src: require("../assets/img/guanyuweijia/about9.jpg"),
+          src: require("@/assets/img/guanyuweijia/about9.jpg"),
           title: "关注情感的精神价值",
           p: "关注现代人居生活状态，以极简设计，倡导极简主义的生活方式，引导消费者关注自身、关注家居及家庭。"
         }
