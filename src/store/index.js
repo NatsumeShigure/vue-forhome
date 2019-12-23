@@ -11,7 +11,7 @@ export default new Vuex.Store({
         title: "关于唯家",
         sub: ["品牌故事", "品牌介绍", "品牌愿景", "品牌定位", "品牌主张", "品牌设计理念", "品牌价值"]
       }, {
-        to: "",
+        to: "/xinwenzhongxin",
         title: "新闻中心",
         sub: ["品牌资讯", "促销活动", "媒介报道", "经销商专区"]
       }, {

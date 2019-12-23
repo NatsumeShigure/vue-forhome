@@ -47,10 +47,10 @@ export default {
 </script>
 <style scoped>
 .brand-service {
-  background: url(../../assets/img/index/20190809171847_661.jpg) center no-repeat;
+  background: url(../../assets/img/index/20190809171847_661.jpg) center
+    no-repeat;
   background-size: cover !important;
   padding-top: 18vh;
-  /* box-sizing: border-box; */
 }
 .brand-service-wrap {
   width: 1148px;

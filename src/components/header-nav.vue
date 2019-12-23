@@ -1,18 +1,19 @@
 <template>
-  <header class="header" :class="isHover">
+  <header class="header" :class="{isHover}">
     <div class="header-wrap">
       <div class="logo">
-        <router-link to="">
-          <img :src="require('@/assets/img/header/logo.png')">
+        <router-link to="/">
+          <img :src="require('@/assets/img/header/logo.png')" v-if="!imgChange">
+          <img :src="require('@/assets/img/header/logo3.png')" v-else>
         </router-link>
       </div>
       <nav class="header-nav">
         <ul>
           <li @mouseenter="hoverChange" @mouseleave="hoverChange">
-            <router-link to="/">首页</router-link>
+            <router-link to="/" :class="{aColor}">首页</router-link>
           </li>
           <li v-for="(v,i) of navList" :key="i" @mouseenter="hoverChange" @mouseleave="hoverChange">
-            <router-link :to="v.to" :class="{on:$route.path==v.to}">{{v.title}}</router-link>
+            <router-link :to="v.to" :class="{on:$route.path==v.to,aColor}">{{v.title}}</router-link>
             <div class="nav-sub">
               <router-link to="" v-for="(v,i) of v.sub" :key="i">{{v}}</router-link>
             </div>
@@ -30,20 +31,30 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
-      isHover: {
-        liHover: false
-      }
+      isHover: false,
+      aColor: false,
+      imgChange: false
     }
   },
   methods: {
     hoverChange() {
-      this.isHover.liHover = this.isHover.liHover ? false : true
+      this.isHover = !this.isHover
     }
   },
   computed: {
     ...mapState([
       "navList"
     ])
+  },
+  watch: {
+    $route(to, from) {
+      this.aColor = (to.name == "xinwenzhongxin") || (to.name == "lianxiwomen") ? true : false
+      this.imgChange = this.aColor
+    }
+  },
+  created() {
+    this.aColor = (this.$route.name == "xinwenzhongxin") || (this.$route.name == "lianxiwomen") ? true : false
+    this.imgChange = this.aColor
   }
 }
 </script>
@@ -66,7 +77,7 @@ export default {
   align-items: center;
   height: 100%;
 }
-.header.liHover {
+.header.isHover {
   border-bottom-color: rgba(255, 250, 242, 0.15);
 }
 .logo {
@@ -128,7 +139,10 @@ export default {
   transition: all 0.3s;
   text-decoration: none;
 }
-.on {
+.aColor {
+  color: #000 !important;
+}
+.header-nav ul li > .on {
   color: #d9b765 !important;
 }
 .nav-sub {

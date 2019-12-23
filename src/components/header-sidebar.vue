@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header-btn btn-overmenu" v-show="fixedChange.menuFixed" @click="showMask">
+    <div class="header-btn btn-overmenu" v-show="menuFixed" @click="showMask">
       <i class="iconfont icon-caidan"></i>
     </div>
     <div class="header-sidebar-mask" v-show="mask" @click="showMask">&nbsp;</div>
@@ -64,7 +64,7 @@ export default {
     }
   },
   props: [
-    "fixedChange"
+    "menuFixed"
   ]
 }
 </script>

@@ -1,15 +1,13 @@
 <template>
   <div class="about">
     <div class="about-banner"></div>
-    <div class="about-menu" :class="fixedChange">
+    <div class="about-menu" :class="{menuFixed}">
       <div class="swiper-wrapper">
-        <router-link to="" :class="{on:index==i}" v-for="(v,i) of swiperList" :key="i" @click.native="point(i)">
-          {{v}}
-        </router-link>
+        <router-link to="" :class="{on:index==i}" v-for="(v,i) of swiperList" :key="i" @click.native="point(i)">{{v}}</router-link>
       </div>
     </div>
-    <div class="about-menu-block" :class="blockChange">&nbsp;</div>
-    <header-sidebar :fixedChange="fixedChange"></header-sidebar>
+    <div class="about-menu-block" :class="{menuBlock}">&nbsp;</div>
+    <header-sidebar :menuFixed="menuFixed"></header-sidebar>
     <div class="about-article">
       <div class="about-story">
         <div class="wp1400">
@@ -162,7 +160,6 @@
         </div>
       </div>
     </div>
-    <footer-nav></footer-nav>
     <ul class="fixed-right">
       <li class="handle-box" :class="{showPupop:active==0}" @click="show(0)">
         <div class="iconfont icon-gongzhonghao"></div>
@@ -216,12 +213,8 @@ export default {
           p: "关注现代人居生活状态，以极简设计，倡导极简主义的生活方式，引导消费者关注自身、关注家居及家庭。"
         }
       ],
-      fixedChange: {
-        menuFixed: false,
-      },
-      blockChange: {
-        menuBlock: false
-      },
+      menuFixed: false,
+      menuBlock: false,
       index: 0,
       active: null
     }
@@ -265,8 +258,8 @@ export default {
     this.body.style.background = "#f1f1f1";
     window.addEventListener("scroll", () => {
       let scrollTop = document.documentElement.scrollTop
-      this.fixedChange.menuFixed = scrollTop >= 970 ? true : false
-      this.blockChange.menuBlock = scrollTop >= 970 ? true : false
+      this.menuFixed = scrollTop >= 970 ? true : false
+      this.menuBlock = scrollTop >= 970 ? true : false
     });
   }
 }

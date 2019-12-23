@@ -7,7 +7,7 @@
       </div>
       <div class="index-news-box">
         <div class="index-news-swiper">
-          <ul class="index-news-list" :class="tranSwitch" :style="ulStyle">
+          <ul class="index-news-list" :class="{newsListTran}" :style="ulStyle">
             <li class="index-news-item" v-for="(v,i) of newsList" :key="i">
               <router-link to="">
                 <div class="news-img">
@@ -87,9 +87,7 @@ export default {
       ],
       i: 1188,
       count: 3,
-      tranSwitch: {
-        newsListTran: true
-      },
+      newsListTran: true,
       canClick: true
     }
   },
@@ -101,13 +99,13 @@ export default {
         this.count++
         if (this.count == 6) {
           setTimeout(() => {
-            this.tranSwitch.newsListTran = false
+            this.newsListTran = false
             let arr = this.newsList.splice(0, 3)
             this.newsList.push(...arr)
             this.count = 3
             this.i = 1188
             setTimeout(() => {
-              this.tranSwitch.newsListTran = true
+              this.newsListTran = true
             }, 30)
           }, 410)
         }
@@ -123,13 +121,13 @@ export default {
         this.count--
         if (this.count == 0) {
           setTimeout(() => {
-            this.tranSwitch.newsListTran = false
+            this.newsListTran = false
             let arr = this.newsList.splice(-3)
             this.newsList.unshift(...arr)
             this.count = 3
             this.i = 1188
             setTimeout(() => {
-              this.tranSwitch.newsListTran = true
+              this.newsListTran = true
             }, 30)
           }, 410)
         }

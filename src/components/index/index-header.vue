@@ -1,9 +1,9 @@
 <template>
-  <header class="index-header" :class="isHover">
+  <header class="index-header" :class="{liHover}">
     <div class="header-wrap">
       <div class="header-logo">
         <div>
-          <router-link to="">
+          <router-link to="/">
             <img :src="require('@/assets/img/header/logo.png')">
           </router-link>
         </div>
@@ -34,14 +34,12 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
-      isHover: {
-        liHover: false
-      }
+      liHover: false
     }
   },
   methods: {
     hoverChange() {
-      this.isHover.liHover = this.isHover.liHover ? false : true
+      this.liHover = !this.liHover
     }
   },
   computed: {
