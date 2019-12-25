@@ -1,13 +1,9 @@
 <template>
-  <div class="about">
+  <div class="about" v-on:click.stop="cli($event)">
     <div class="about-banner"></div>
-    <div class="about-menu" :class="{menuFixed}">
-      <div class="swiper-wrapper">
-        <router-link to="" :class="{on:index==i}" v-for="(v,i) of swiperList" :key="i" @click.native="point(i)">{{v}}</router-link>
-      </div>
-    </div>
+    <Menu :menuFixed="menuFixed" :swiperList="swiperList" :index="index" @point="point" />
     <div class="about-menu-block" :class="{menuBlock}">&nbsp;</div>
-    <header-sidebar :menuFixed="menuFixed"></header-sidebar>
+    <header-sidebar :menuFixed="menuFixed" />
     <div class="about-article">
       <div class="about-story">
         <div class="wp1400">
@@ -160,32 +156,7 @@
         </div>
       </div>
     </div>
-    <ul class="fixed-right">
-      <li class="handle-box" :class="{showPupop:active==0}" @click="show(0)">
-        <div class="iconfont icon-gongzhonghao"></div>
-        <p>微信公众号</p>
-        <div class="handle-box-pupop">
-          <img :src="require('@/assets/img/guanyuweijia/qrcode.jpg')">
-        </div>
-      </li>
-      <li class="handle-box" :class="{showPupop:active==1}" @click="show(1)">
-        <div class="iconfont icon-xiaochengxu"></div>
-        <p>微信小程序</p>
-        <div class="handle-box-pupop">
-          <img :src="require('@/assets/img/guanyuweijia/xiaochenxu.png')">
-        </div>
-      </li>
-      <li class="handle-box">
-        <router-link to="" class="handle-box">
-          <div class="iconfont icon-icon"></div>
-          <p>联系我们</p>
-        </router-link>
-      </li>
-      <li class="handle-box" @click="roll">
-        <div class="iconfont icon-huidingbu"></div>
-        <p>回到顶部</p>
-      </li>
-    </ul>
+    <fixed-right :active="active" @show="show" />
   </div>
 </template>
 <script>
@@ -215,7 +186,7 @@ export default {
       ],
       menuFixed: false,
       menuBlock: false,
-      index: 0,
+      index: null,
       active: null
     }
   },
@@ -249,8 +220,8 @@ export default {
     show(i) {
       this.active = this.active == i ? null : i
     },
-    roll() {
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    cli(e) {
+      console.log(e.currentTarget)
     }
   },
   created() {
@@ -261,6 +232,19 @@ export default {
       this.menuFixed = scrollTop >= 970 ? true : false
       this.menuBlock = scrollTop >= 970 ? true : false
     });
+  },
+  mounted() {
+    document.body.addEventListener("click", e => {
+      // console.log(e.target.className);
+      // if (e.target.className === "handle-box" || e.target.className === "iconfont icon-gongzhonghao" || e.target.className === "handle-box" && this.active === null) {
+      //   console.log(1);
+      //   return;
+      // } else {
+      //   this.active = null
+      //   console.log(123);
+      // }
+      console.log(e.currentTarget)
+    }, false)
   }
 }
 </script>
@@ -277,60 +261,12 @@ export default {
   background-size: cover;
   padding-bottom: 51%;
 }
-.about-menu {
-  position: relative;
-  padding: 11px 40px 12px;
-  background: #fff;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.02);
-  border-top: 2px solid #f0efed;
-  border-bottom: 1px solid #f0efed;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.about-menu.menuFixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
 .about-menu-block {
   display: none;
   height: 60px;
 }
 .about-menu-block.menuBlock {
   display: block;
-}
-.swiper-wrapper {
-  width: 100%;
-  display: block;
-  text-align: center;
-}
-.swiper-wrapper a {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 10px;
-  width: auto;
-  min-width: 100px;
-  height: 34px;
-  line-height: 34px;
-  padding: 0 18px;
-  text-align: center;
-  font-size: 16px;
-  color: #333;
-  border-radius: 34px;
-  box-sizing: border-box;
-  transition: all 0.3s;
-}
-.swiper-wrapper a.on {
-  color: #000;
-  background: linear-gradient(90deg, #dab866 10%, #aa8f4c 100%);
-}
-.swiper-wrapper a:hover {
-  background: linear-gradient(90deg, #dab866 10%, #aa8f4c 100%);
-  border-color: transparent;
-  color: #000;
 }
 .about-article {
   font-size: 16px;
@@ -630,77 +566,5 @@ export default {
   line-height: 28px;
   font-size: 20px;
   color: #333;
-}
-.fixed-right {
-  position: fixed;
-  bottom: 8%;
-  right: 0;
-  width: 80px;
-  z-index: 1000;
-  list-style: none;
-  margin: 0;
-}
-.fixed-right li {
-  margin-bottom: 1px;
-}
-.fixed-right .handle-box {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  background: #fff;
-  cursor: pointer;
-  width: 100%;
-}
-.fixed-right p {
-  margin: 4px 0 0 0;
-  font-size: 12px;
-  color: #666;
-  padding: 0;
-  font-weight: normal;
-}
-.fixed-right .handle-box-pupop {
-  position: absolute;
-  right: 90px;
-  top: 50%;
-  background: #fff;
-  padding: 10px;
-  width: 120px;
-  transform: translateY(-50%) scale(0);
-  transform-origin: right center;
-  transition: all 0.5s;
-}
-.fixed-right .handle-box-pupop::after {
-  content: "";
-  position: absolute;
-  right: -4%;
-  top: 50%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-left: 6px solid #fff;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-}
-.fixed-right .handle-box:hover,
-.fixed-right .handle-box.showPupop {
-  background: linear-gradient(90deg, #dab866 10%, #aa8f4c 100%);
-}
-.fixed-right .handle-box.showPupop .handle-box-pupop {
-  transform: translateY(-50%) scale(1);
-}
-.fixed-right .handle-box-pupop img {
-  width: 100%;
-  height: auto;
-  vertical-align: top;
-  border: 0;
-}
-.iconfont.icon-huidingbu,
-.iconfont.icon-icon,
-.iconfont.icon-xiaochengxu,
-.iconfont.icon-gongzhonghao {
-  font-size: 30px;
-  color: #262525;
 }
 </style>
